@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NotOnBoardedActivity"></activity>
+        <activity android:name=".TenantHomePageActivity"></activity>
+        <activity android:name=".NotOnBoardedActivity" />
         <activity android:name=".ManagerHomePageActivity" />
         <activity android:name=".ManagerFillDetailsActivity" />
         <activity android:name=".TenantLoginActivity" />
