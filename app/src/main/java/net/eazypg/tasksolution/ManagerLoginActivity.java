@@ -90,7 +90,7 @@ public class ManagerLoginActivity extends AppCompatActivity {
 
                     firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
-                        ProgressDialog progressDialog = ProgressDialog.show(ManagerLoginActivity.this, "","Signing in..", true);
+                        ProgressDialog progressDialog = ProgressDialog.show(ManagerLoginActivity.this, "", "Signing in..", true);
 
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -99,11 +99,11 @@ public class ManagerLoginActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
                                 firebaseUser = firebaseAuth.getCurrentUser();
 
-                                // ToDo: Go to Home
 
 
-                            }
-                            else {
+                                startActivity(new Intent(ManagerLoginActivity.this,ManagerHomePageActivity.class));
+
+                            } else {
 
                                 Toast.makeText(ManagerLoginActivity.this, "Sign in failed", Toast.LENGTH_SHORT).show();
                             }
@@ -142,7 +142,7 @@ public class ManagerLoginActivity extends AppCompatActivity {
 
                 if (!error) {
 
-                    final ProgressDialog progressDialog = ProgressDialog.show(ManagerLoginActivity.this, "","Signing up..", true);
+                    final ProgressDialog progressDialog = ProgressDialog.show(ManagerLoginActivity.this, "", "Signing up..", true);
 
                     firebaseAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
@@ -164,8 +164,6 @@ public class ManagerLoginActivity extends AppCompatActivity {
                         }
                     });
                 }
-
-
 
 
             }
