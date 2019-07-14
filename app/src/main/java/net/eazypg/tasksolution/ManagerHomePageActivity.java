@@ -60,7 +60,10 @@ public class ManagerHomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                // ToDo: Show onboarded in next activity
+
+                startActivity(new Intent(ManagerHomePageActivity.this , OnBoardedActivity.class));
+
+
             }
         });
 

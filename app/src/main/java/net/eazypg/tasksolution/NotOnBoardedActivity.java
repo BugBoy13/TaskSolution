@@ -20,6 +20,7 @@ import java.util.ArrayList;
 
 public class NotOnBoardedActivity extends AppCompatActivity {
 
+
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
