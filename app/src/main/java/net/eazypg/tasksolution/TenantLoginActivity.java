@@ -80,6 +80,8 @@ public class TenantLoginActivity extends AppCompatActivity {
                                 @Override
                                 public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
 
+
+
                                     String code = phoneAuthCredential.getSmsCode();
 
                                     Toast.makeText(TenantLoginActivity.this, "OTP Retrieved " + code, Toast.LENGTH_SHORT).show();

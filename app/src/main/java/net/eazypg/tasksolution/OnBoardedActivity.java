@@ -51,6 +51,7 @@ public class OnBoardedActivity extends AppCompatActivity {
 
 
         databaseReference.addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
